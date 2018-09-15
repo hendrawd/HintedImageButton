@@ -1,4 +1,4 @@
-package hendrawd.library.hintedimagebutton;
+package hendrawd.library.customview;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

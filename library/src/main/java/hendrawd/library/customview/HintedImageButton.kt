@@ -1,4 +1,4 @@
-package hendrawd.library.hintedimagebutton
+package hendrawd.library.customview
 
 import android.content.Context
 import android.support.v7.widget.AppCompatImageButton
@@ -48,14 +48,19 @@ class HintedImageButton @JvmOverloads constructor(context: Context, attrs: Attri
     private fun handleLongClick() {
         contentDescription?.toString()?.let { contentDescription ->
             if (contentDescription.isNotEmpty()) {
-                IntArray(2).apply {
-                    getLocationInWindow(this)
-                    val xOffset = this[0]
-                    val yOffset = this[1] - height
-                    Toast.makeText(context, contentDescription, Toast.LENGTH_SHORT).apply {
-                        setGravity(Gravity.CENTER or Gravity.LEFT, xOffset, yOffset)
-                        show()
-                    }
+                val positions = IntArray(2)
+                getLocationOnScreen(positions)
+
+                val xOffset = positions[0] - contentDescription.length / 6
+                val yOffset = positions[1] - 128
+
+                Toast.makeText(
+                        context,
+                        contentDescription,
+                        Toast.LENGTH_SHORT
+                ).apply {
+                    setGravity(Gravity.TOP or Gravity.LEFT, xOffset, yOffset)
+                    show()
                 }
             }
         }

@@ -1,4 +1,4 @@
-package hendrawd.library.hintedimagebutton;
+package hendrawd.library.customview;
 
 import org.junit.Test;
 
