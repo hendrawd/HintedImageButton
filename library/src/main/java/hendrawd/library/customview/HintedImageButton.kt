@@ -9,8 +9,7 @@ import android.view.View.OnLongClickListener
 import android.widget.Toast
 
 /**
- * Extended image view to show the content description in a Toast view when
- * the user long presses.
+ * Show the content description in a Toast when the user long presses it.
  *
  * Note: `android:contentDescription` must be set in order for the toast to
  * work
@@ -32,20 +31,20 @@ class HintedImageButton @JvmOverloads constructor(context: Context, attrs: Attri
 
     override fun onLongClick(longClickedView: View): Boolean {
         if (mOnLongClickListener != null) {
-            mOnLongClickListener?.apply {
+            mOnLongClickListener?.run {
                 if (!onLongClick(longClickedView)) {
-                    handleLongClick()
+                    showContentDescriptionAsHint()
                     return true
                 }
             }
         } else {
-            handleLongClick()
+            showContentDescriptionAsHint()
             return true
         }
         return false
     }
 
-    private fun handleLongClick() {
+    private fun showContentDescriptionAsHint() {
         contentDescription?.toString()?.let { contentDescription ->
             if (contentDescription.isNotEmpty()) {
                 val positions = IntArray(2)
