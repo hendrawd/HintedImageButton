@@ -7,11 +7,27 @@
     tools:context=".MainActivity"
     >
 
-    <hendrawd.library.customview.HintedImageButton
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:contentDescription="This is hint"
-        android:src="@mipmap/ic_launcher"
-        />
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent"
+        >
+
+        <hendrawd.library.customview.HintedImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/hint"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/long_click_button_above"
+            />
+    </LinearLayout>
 </FrameLayout>

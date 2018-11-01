@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HintedImageButton</string>
+    <string name="hint">This is a hint</string>
+    <string name="long_click_button_above">Long click button above</string>
 </resources>
