@@ -29,3 +29,11 @@ Where **x.x.x** is the latest release version. Please check the latest release v
 	android:background="@drawable/optional_selector"
 	/>
 ```
+This library ❤️ anko DSL. You can use it directly from your kotlin code.
+```kotlin
+frameLayout { 
+    hintedImageButton { 
+	// ...
+    }
+}
+```
