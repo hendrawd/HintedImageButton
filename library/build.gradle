@@ -28,6 +28,7 @@ dependencies {
 
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "org.jetbrains.anko:anko-common:$ankoVersion"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

@@ -7,6 +7,7 @@ buildscript {
         targetSdkVersion = 27
         supportLibVersion = "27.1.1"
         kotlinVersion = '1.2.71'
+        ankoVersion = "0.10.5"
     }
     repositories {
         google()
