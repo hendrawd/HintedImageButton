@@ -8,10 +8,9 @@ ImageButton that shows hint using toast when long clicked
 - Add jitpack url in your root build.gradle
 ```gradle
 allprojects {
- repositories {
-  ...
-  maven { url 'https://jitpack.io' }
- }
+   repositories {
+      maven { url 'https://jitpack.io' }
+   }
 }
 ```
 - Add the dependency
@@ -35,7 +34,7 @@ or
 ```kotlin
 frameLayout { 
     hintedImageButton { 
- // ...
+       // set properties
     }
 }
 ```
