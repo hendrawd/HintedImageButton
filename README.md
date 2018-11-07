@@ -23,12 +23,12 @@ Where **x.x.x** is the latest release version. Check the latest release version 
 - Use
 ```XML
 <hendrawd.library.customview.HintedImageButton
- android:layout_width="wrap_content"
- android:layout_height="wrap_content"
- android:src="@drawable/ic_xxx"
- android:contentDescription="Put your hint here!"
- android:background="@drawable/optional_selector"
- />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_xxx"
+    android:contentDescription="Put your hint here!"
+    android:background="@drawable/optional_selector"
+    />
 ```
 or
 ```kotlin
