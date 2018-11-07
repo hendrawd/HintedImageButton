@@ -30,7 +30,7 @@ Where **x.x.x** is the latest release version. Check the latest release version 
     android:background="@drawable/optional_selector"
     />
 ```
-or
+or directly within anko layout
 ```kotlin
 frameLayout { 
     hintedImageButton { 
