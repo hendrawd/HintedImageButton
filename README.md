@@ -29,6 +29,7 @@ Where **x.x.x** is the latest release version. Check the latest release version 
     android:contentDescription="Put your hint here!"
     android:background="@drawable/optional_selector"
     />
+<!-- use android:background="@null" if you want to remove the background-->
 ```
 or directly within anko layout
 ```kotlin
