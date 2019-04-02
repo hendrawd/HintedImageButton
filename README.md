@@ -1,3 +1,19 @@
+# You don't need this library anymore!
+
+Starting from Android Oreo you can use `android:tooltipText` attribute in order to display a simple Toast-like tooltip when user long-presses on a `View`
+```xml
+<Button
+    android:id="@+id/yourButton"
+    android:tooltipText="@string/button_tooltip"/>
+```
+Although it has limitation with minimum API 26, you can still use it through the Support Library's `TooltipCompat` helper class
+```kotlin
+TooltipCompat.setTooltipText(yourButton, getString(R.string.button_tooltip))
+```
+Have fun! ;)
+
+------
+
 # HintedImageButton
 
 ImageButton that shows hint using toast when long clicked
