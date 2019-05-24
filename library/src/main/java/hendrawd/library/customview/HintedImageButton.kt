@@ -1,7 +1,7 @@
 package hendrawd.library.customview
 
 import android.content.Context
-import android.support.v7.widget.AppCompatImageButton
+import androidx.appcompat.widget.AppCompatImageButton
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
