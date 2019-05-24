@@ -19,20 +19,30 @@ class ChooserActivity : AppCompatActivity() {
             orientation = LinearLayout.VERTICAL
 
             button {
-                text = MainActivity::class.java.simpleName
+                text = HintActivity::class.java.simpleName
                 allCaps = false
                 setOnClickListener {
-                    startActivity<MainActivity>()
+                    startActivity<HintActivity>()
                 }
-            }.lparams(wrapContent, wrapContent)
+            }.lparams(matchParent, wrapContent)
 
             button {
-                text = MainAnkoActivity::class.java.simpleName
+                text = HintWithAnkoLayoutActivity::class.java.simpleName
                 allCaps = false
                 setOnClickListener {
-                    startActivity<MainAnkoActivity>()
+                    startActivity<HintWithAnkoLayoutActivity>()
                 }
-            }.lparams(wrapContent, wrapContent) {
+            }.lparams(matchParent, wrapContent) {
+                topMargin = dip(8)
+            }
+
+            button {
+                text = FancyHintActivity::class.java.simpleName
+                allCaps = false
+                setOnClickListener {
+                    startActivity<FancyHintActivity>()
+                }
+            }.lparams(matchParent, wrapContent) {
                 topMargin = dip(8)
             }
         }

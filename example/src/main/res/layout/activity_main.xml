@@ -8,7 +8,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    tools:context=".HintActivity"
     tools:ignore="UselessParent"
     >
 

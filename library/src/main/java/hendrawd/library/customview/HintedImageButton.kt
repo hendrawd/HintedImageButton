@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
 import android.view.View.OnLongClickListener
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatImageButton
 
@@ -24,6 +25,8 @@ class HintedImageButton @JvmOverloads constructor(
 ) : AppCompatImageButton(context, attrs, defStyleAttr), OnLongClickListener {
 
     private var mOnLongClickListener: OnLongClickListener? = null
+    private var customLayout: View? = null
+    private var textView: TextView? = null
     var hintDuration = DURATION_SHORT
 
     companion object {
@@ -75,7 +78,7 @@ class HintedImageButton @JvmOverloads constructor(
                 getLocationOnScreen(positions)
 
                 val xOffset = positions[0] - contentDescription.length / 6
-                val yOffset = positions[1] - 128 // TODO change y position based on view height
+                val yOffset = positions[1] - height
 
                 Toast.makeText(
                         context,
@@ -86,10 +89,19 @@ class HintedImageButton @JvmOverloads constructor(
                             Toast.LENGTH_LONG
                         }
                 ).apply {
+                    if (customLayout != null && textView != null) {
+                        customLayout?.let { view = customLayout }
+                        textView?.text = contentDescription
+                    }
                     setGravity(Gravity.TOP or Gravity.LEFT, xOffset, yOffset)
                     show()
                 }
             }
         }
+    }
+
+    fun setCustomLayout(layout: View, textView: TextView) {
+        customLayout = layout
+        this.textView = textView
     }
 }

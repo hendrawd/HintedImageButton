@@ -17,12 +17,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:label="MainActivity"
+            android:name=".HintActivity"
+            android:label="HintActivity"
             />
         <activity
-            android:name=".MainAnkoActivity"
-            android:label="MainAnkoActivity"
+            android:name=".HintWithAnkoLayoutActivity"
+            android:label="HintWithAnkoLayoutActivity"
+            />
+        <activity
+            android:name=".FancyHintActivity"
+            android:label="FancyHintActivity"
             />
     </application>
 
