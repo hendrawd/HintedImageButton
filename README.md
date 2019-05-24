@@ -1,5 +1,8 @@
 # HintedImageButton
 
+[![Jitpack](https://jitpack.io/v/hendrawd/HintedImageButton.svg)](https://jitpack.io/#hendrawd/HintedImageButton)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-HintedImageButton-blue.svg?style=flat)](https://android-arsenal.com/details/1/7303)
+
 ImageButton that shows hint using toast when long clicked
 
 <img src="https://user-images.githubusercontent.com/9481791/48111769-a0235d00-e285-11e8-9ffe-0029d801c74f.jpg" width="300px"/>&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/9481791/58359578-56f7cb00-7eae-11e9-9299-ebdb2f8b7e97.jpg" width="300px"/>
