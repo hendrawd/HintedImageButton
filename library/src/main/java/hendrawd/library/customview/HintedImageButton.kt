@@ -21,7 +21,7 @@ import androidx.appcompat.widget.AppCompatImageButton
 class HintedImageButton @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
-        defStyleAttr: Int = 0
+        defStyleAttr: Int = androidx.appcompat.R.attr.imageButtonStyle
 ) : AppCompatImageButton(context, attrs, defStyleAttr), OnLongClickListener {
 
     private var mOnLongClickListener: OnLongClickListener? = null
@@ -78,10 +78,10 @@ class HintedImageButton @JvmOverloads constructor(
                 getLocationOnScreen(positions)
 
                 val xOffset = positions[0] - contentDescription.length / 6
-                val yOffset = positions[1] - height
+                val yOffset = positions[1] - height * 3 / 4
 
                 Toast.makeText(
-                        context,
+                        context.applicationContext,
                         contentDescription,
                         if (hintDuration == DURATION_SHORT) {
                             Toast.LENGTH_SHORT
