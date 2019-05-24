@@ -1,19 +1,3 @@
-# You don't need this library anymore!
-
-Starting from Android Oreo you can use `android:tooltipText` attribute in order to display a simple Toast-like tooltip when user long-presses on a `View`
-```xml
-<Button
-    android:id="@+id/yourButton"
-    android:tooltipText="@string/button_tooltip"/>
-```
-Although it has limitation with minimum API 26, you can still use it through the Support Library's `TooltipCompat` helper class
-```kotlin
-TooltipCompat.setTooltipText(yourButton, getString(R.string.button_tooltip))
-```
-Have fun! ;)
-
-------
-
 # HintedImageButton
 
 ImageButton that shows hint using toast when long clicked
@@ -46,6 +30,11 @@ Where **x.x.x** is the latest release version. Check the latest release version 
     android:background="@drawable/optional_selector"
     />
 <!-- use android:background="@null" if you want to remove the background-->
+<!--optional app:hintDuration="durationShort" or "durationLong", default="durationShort"-->
+```
+set duration property from code (optional)
+```kotlin
+hintedImageButton.hintDuration = HintedImageButton.DURATION_LONG // or HintedImageButton.DURATION_SHORT
 ```
 or directly within anko layout
 ```kotlin
@@ -55,3 +44,17 @@ frameLayout {
     }
 }
 ```
+
+# New Attribute in Android Oreo
+
+Starting from Android Oreo you can also use `android:tooltipText` attribute in order to display a simple Toast-like tooltip when user long-presses on a `View`
+```xml
+<View
+    android:id="@+id/yourView"
+    android:tooltipText="@string/view_tooltip"/>
+```
+Although it has limitation with minimum API 26, you can still use it through the Support Library's `TooltipCompat` helper class
+```kotlin
+TooltipCompat.setTooltipText(yourView, getString(R.string.view_tooltip))
+```
+Have fun! ;)
