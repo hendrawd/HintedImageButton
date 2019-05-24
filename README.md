@@ -2,7 +2,7 @@
 
 ImageButton that shows hint using toast when long clicked
 
-<img src="https://user-images.githubusercontent.com/9481791/48111769-a0235d00-e285-11e8-9ffe-0029d801c74f.jpg" width="300px"/>
+<img src="https://user-images.githubusercontent.com/9481791/48111769-a0235d00-e285-11e8-9ffe-0029d801c74f.jpg" width="300px"/>&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/9481791/58359578-56f7cb00-7eae-11e9-9299-ebdb2f8b7e97.jpg" width="300px"/>
 
 # How to use?
 - Add jitpack url in your root build.gradle
@@ -30,11 +30,6 @@ Where **x.x.x** is the latest release version. Check the latest release version 
     android:background="@drawable/optional_selector"
     />
 <!-- use android:background="@null" if you want to remove the background-->
-<!--optional app:hintDuration="durationShort" or "durationLong", default="durationShort"-->
-```
-set duration property from code (optional)
-```kotlin
-hintedImageButton.hintDuration = HintedImageButton.DURATION_LONG // or HintedImageButton.DURATION_SHORT
 ```
 or directly within anko layout
 ```kotlin
@@ -43,6 +38,22 @@ frameLayout {
        // set properties
     }
 }
+```
+
+# Customization (see example project for more clarity)
+- Set duration
+```XML
+<hendrawd.library.customview.HintedImageButton
+    app:hintDuration="durationLong"
+    />
+<!-- "durationShort" or "durationLong", default="durationShort" -->
+```
+```kotlin
+hintedImageButton.hintDuration = HintedImageButton.DURATION_LONG // or HintedImageButton.DURATION_SHORT
+```
+- Set custom layout
+```kotlin
+hintedImageButton.setCustomLayout(yourCustomLayout, yourTextView)
 ```
 
 # New Attribute in Android Oreo
