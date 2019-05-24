@@ -5,11 +5,12 @@ import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import hendrawd.library.customview.hintedImageButton
 import org.jetbrains.anko.*
 
-class MainAnkoActivity : AppCompatActivity() {
-
+/**
+ * @author hendrawd on 24 May 2019
+ */
+class ChooserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         linearLayout {
@@ -17,14 +18,21 @@ class MainAnkoActivity : AppCompatActivity() {
             gravity = Gravity.CENTER
             orientation = LinearLayout.VERTICAL
 
-            hintedImageButton {
-                contentDescription = getString(R.string.hint_anko)
-                imageResource = R.mipmap.ic_launcher
-                // optional set hint duration HintedImageButton.DURATION_SHORT or DURATION_LONG
-                // hintDuration = HintedImageButton.DURATION_LONG
+            button {
+                text = MainActivity::class.java.simpleName
+                allCaps = false
+                setOnClickListener {
+                    startActivity<MainActivity>()
+                }
             }.lparams(wrapContent, wrapContent)
 
-            textView(R.string.long_click_button_above).lparams(wrapContent, wrapContent) {
+            button {
+                text = MainAnkoActivity::class.java.simpleName
+                allCaps = false
+                setOnClickListener {
+                    startActivity<MainAnkoActivity>()
+                }
+            }.lparams(wrapContent, wrapContent) {
                 topMargin = dip(8)
             }
         }
