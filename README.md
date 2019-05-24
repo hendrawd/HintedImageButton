@@ -58,7 +58,7 @@ hintedImageButton.setCustomLayout(yourCustomLayout, yourTextView)
 
 # New Attribute in Android Oreo
 
-Starting from Android Oreo you can also use `android:tooltipText` attribute in order to display a simple Toast-like tooltip when user long-presses on a `View`
+Starting from Android Oreo, if your requirement is just to show simple tooltip to any View, you can use `android:tooltipText` attribute directly without this library in order to display a simple Toast-like tooltip when user long-presses or mouse hover on a `View`
 ```xml
 <View
     android:id="@+id/yourView"
