@@ -19,6 +19,14 @@ class ChooserActivity : AppCompatActivity() {
             orientation = LinearLayout.VERTICAL
 
             button {
+                text = AppCompatHintActivity::class.java.simpleName
+                allCaps = false
+                setOnClickListener {
+                    startActivity<AppCompatHintActivity>()
+                }
+            }.lparams(matchParent, wrapContent)
+
+            button {
                 text = HintActivity::class.java.simpleName
                 allCaps = false
                 setOnClickListener {

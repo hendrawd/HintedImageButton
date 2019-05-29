@@ -71,6 +71,13 @@ class HintedImageButton @JvmOverloads constructor(
         return false
     }
 
+    override fun onHoverChanged(hovered: Boolean) {
+        if (hovered) {
+            showContentDescriptionAsHint()
+        }
+        super.onHoverChanged(hovered)
+    }
+
     private fun showContentDescriptionAsHint() {
         contentDescription?.toString()?.let { contentDescription ->
             if (contentDescription.isNotEmpty()) {

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">HintedImageButton</string>
     <string name="hint">This is a hint</string>
+    <string name="app_compat_hint">This is an app compat hint</string>
     <string name="custom_hint">This is a custom hint</string>
     <string name="hint_anko">This is a hint from Anko Layout</string>
     <string name="long_click_button_above">Long click button above</string>

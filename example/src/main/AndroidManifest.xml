@@ -28,6 +28,10 @@
             android:name=".FancyHintActivity"
             android:label="FancyHintActivity"
             />
+        <activity
+            android:name=".AppCompatHintActivity"
+            android:label="AppCompatHintActivity"
+            />
     </application>
 
 </manifest>
