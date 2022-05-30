@@ -7,7 +7,7 @@ class HintActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_hint)
         // optional set hint duration HintedImageButton.DURATION_SHORT or DURATION_LONG
         // hintedImageButton.hintDuration = HintedImageButton.DURATION_LONG
     }

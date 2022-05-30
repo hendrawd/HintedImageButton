@@ -30,8 +30,8 @@ class HintedImageButton @JvmOverloads constructor(
     var hintDuration = DURATION_SHORT
 
     companion object {
-        val DURATION_SHORT = 0
-        val DURATION_LONG = 1
+        const val DURATION_SHORT = 0
+        const val DURATION_LONG = 1
     }
 
     init {

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bAppCompatHintActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/b_app_compat_hint_activity_text"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bHintActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/b_hint_activity_text"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bFancyHintActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/b_fancy_hint_activity_text"
+        android:textAllCaps="false" />
+
+</LinearLayout>

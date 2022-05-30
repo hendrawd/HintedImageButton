@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChooserActivity">
+        <activity android:name=".ChooserActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,10 +20,6 @@
         <activity
             android:name=".HintActivity"
             android:label="HintActivity"
-            />
-        <activity
-            android:name=".HintWithAnkoLayoutActivity"
-            android:label="HintWithAnkoLayoutActivity"
             />
         <activity
             android:name=".FancyHintActivity"

@@ -5,4 +5,7 @@
     <string name="custom_hint">This is a custom hint</string>
     <string name="hint_anko">This is a hint from Anko Layout</string>
     <string name="long_click_button_above">Long click button above</string>
+    <string name="b_app_compat_hint_activity_text">AppCompatHintActivity (As the android standard)</string>
+    <string name="b_hint_activity_text">HintActivity (Using this library)</string>
+    <string name="b_fancy_hint_activity_text">FancyHintActivity (Using this library + custom view)</string>
 </resources>
