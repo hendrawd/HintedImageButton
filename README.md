@@ -34,16 +34,8 @@ Where **x.x.x** is the latest release version. Check the latest release version 
     />
 <!-- use android:background="@null" if you want to remove the background-->
 ```
-or directly within anko layout
-```kotlin
-frameLayout { 
-    hintedImageButton { 
-       // set properties
-    }
-}
-```
 
-# Customization (see example project for more clarity)
+# Customization (see the example project for more clarity)
 - Set duration
 ```XML
 <hendrawd.library.customview.HintedImageButton
